@@ -1,0 +1,19 @@
+{
+  "name": "angtest",
+  "version": "0.0.1",
+  "description": "angular test",
+  "main": "angtest.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Wood scottw@finao.com",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "angular": "^1.8.2",
+    "requirejs": "^2.3.6"
+  }
+}
