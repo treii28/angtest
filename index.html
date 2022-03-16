@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript">
+        // used to set jquery globally from child scopes of require.js
+        var $ = null;
+        var setJqueryGlobal = function(jq) {
+            console.log('setting jquery globally');
+            $ = jq;
+            console.log("now global scope $ ",((typeof($) == 'function')?'is loaded':'is not yet loaded'));
+        }
+    </script>
     <!-- script src="https://code.jquery.com/jquery-3.6.0.js"></script -->
     <script data-main="app/main.js"
             src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
@@ -12,5 +21,8 @@
 <body>
     <h1 id="foo">Angular test</h1>
     <div ng-view></div>
+    <script type="text/javascript">
+        console.log("global scope $ ",((typeof($) == 'function')?'is loaded':'is not yet loaded'));
+    </script>
 </body>
 </html>
